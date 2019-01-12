@@ -1,5 +1,3 @@
-console.log('HELLLOOOOOOOO');
-
 // NAME ANIMATION
 
 // document.getElementById('hero-left').addEventListener('mouseover', function(event) {

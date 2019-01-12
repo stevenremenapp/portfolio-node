@@ -1,1 +1,178 @@
-PROJECTS
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Projects | Steven Remenapp</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/frames.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+    <!-- FAVICON -->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+    <link rel="manifest" href="favicons/site.webmanifest">
+    <link rel="mask-icon" href="favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+</head>
+<body class="interior-page-body">
+    <div class="frame projects-frame-0"></div>
+    <div class="frame projects-frame-1"></div>
+    <div class="cntr">
+        <h1 class="project-header">
+            <span class="animation-letter">P</span>
+            <span class="animation-letter">R</span>
+            <span class="animation-letter">O</span>
+            <span class="animation-letter">J</span>
+            <span class="animation-letter">E</span>
+            <span class="animation-letter">C</span>
+            <span class="animation-letter">T</span>
+            <span class="animation-letter">S</span>
+        </h1>
+        <div class="menu-icon" tabindex="0">
+            <svg viewBox="0 0 40 40" id="menu-icon-open">
+                <rect id="menu-top" x="5" y="7.5" width="30" height="5" fill="#000" />
+                <rect id="menu-middle" x="5" y="17.5" width="30" height="5" fill="#000" />
+                <rect id="menu-bottom" x="5" y="27.5" width="30" height="5" fill="#000" />
+            </svg>
+            </div>
+            <div class="menu-closed-icon">
+                <svg viewBox="0 0 40 40">
+                    <rect class="menu-closed-x" x="22" y="17.5" width="12" height="5" transform="rotate(45 20 20)" fill="#000"/>
+                    <rect class="menu-closed-x" x="22" y="18" width="12" height="5" transform="rotate(135 20 20)" fill="#000" />
+                    <rect class="menu-closed-x" x="22" y="18" width="12" height="5" transform="rotate(225 20 20)" fill="#000" />
+                    <rect class="menu-closed-x" x="22" y="17.5" width="12" height="5" transform="rotate(315 20 20)" fill="#000" />
+                    <rect x="17.5" y="17.5" width="5" height="5" transform="rotate(315 20 20)" fill="#000" />
+                </svg>
+            </div>
+            <div class="menu">
+                <a href="/"><p>Home</p></a>
+                <!-- <p>About</p> -->
+                <a href="projects"><p>Projects</p></a>
+                <a href="contact"><p>Contact</p></a>
+                <p>Credits</p>
+                <!-- <p>Cluedo</p> -->
+            </div>
+            <div class="menu-overlay"></div>
+        <div class="contact-widget">
+            <div class="home projects-widget">
+                <i class="fas fa-bullhorn"></i>
+                <i class="fas fa-times"></i>
+            </div>
+            <div class="email projects-widget">
+                <a href="mailto:remenapp@gmail.com?Subject=Helloooooo">
+                    <div class="tooltip left">
+                        <i class="far fa-envelope"></i>
+                        <span class="tooltip-content">Email me</span>
+                    </div>
+                </a>
+            </div>
+            <div class="github projects-widget">
+                <a href="https://github.com/stevenremenapp" target="_blank" rel="noopener noreferrer">
+                    <div class="tooltip left">
+                        <i class="fab fa-github"></i>
+                        <span class="tooltip-content">Github</span>
+                    </div>
+                </a>
+            </div>
+            <div class="linkedin projects-widget">
+                <a href="https://www.linkedin.com/in/stevenremenapp/" target="_blank" rel="noopener noreferrer">
+                    <div class="tooltip left">
+                        <i class="fab fa-linkedin"></i>
+                        <span class="tooltip-content">LinkedIn</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <h2 class="projects-display-option"><span tabindex="0" id="projects-library">Library</span> | <span tabindex="0" id="projects-non-library">Other</span></h2>
+        <div class="projects-container">
+            <div id="library-projects">
+                <div class="project-grid-container">
+                    <div class="project-image">
+                        <img src="images/projectImages/tlnMap.png" alt="Image of this app displaying map with pins of public libraries in The Library Network cooperative in the metro-Detroit area">
+                    </div>
+                    <div class="project-title">
+                        <h3>The Library Network Cooperative Map</h3>
+                    </div>
+                    <div class="project-desc">
+                        <div>
+                            <p>This is a resource that I wish existed when I started working in <a href="https://tln.lib.mi.us/" target="_blank" rel="noopener noreferrer">The Library Network (TLN) libraries</a>. It is a map app utilizing Mapbox GL JS, React, and uber’s react-map-gl library to render a map of TLN libraries and includes a map that is responsive to user input for navigation and map pin interaction along with a sidebar that allows the user to search and filter libraries by text input.</p>
+                            <br>
+                            <p>This is still a work in progress and for now includes 10 TLN libraries. I will expand this map to include all locations and further filtering limiters that would be helpful for library employees.</p>
+                        </div>
+                        <div class="icons">
+                            <a href="https://stevenremenapp.github.io/tlnmap/" target="_blank" rel="noopener noreferrer"><i class="fas fa-link"></i></a>
+                            <a href="https://github.com/stevenremenapp/tlnmap" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-grid-container">
+                    <div class="project-image">
+                        <img src="images/projectImages/scorekeeper.png" alt="Image of this scorekeeper app">
+                    </div>
+                    <div class="project-title">
+                        <h3>Battle of the Books Scorekeeper</h3>
+                    </div>
+                    <div class="project-desc">
+                        <div>
+                            <p>A youth librarian colleague asked if I could make her a scorekeeper to use in her Battle of the Books program. Previously, she had been using two apps, which meant another staff member was needed to handle scorekeeping while she ran the event.</p>
+                            <br>
+                            <p>Given specific needs, I created this scorekeeper which includes a timer, sound effects, and space to track the scores of four teams. I also learned about using objects to maintain state and handling session storage in the browser. Battle of the Books now only requires one librarian and they can keep score from their phone.</p>
+                        </div>
+                        <div class="icons">
+                            <a href="https://stevenremenapp.github.io/scorekeeper/" target="_blank" rel="noopener noreferrer"><i class="fas fa-link"></i></a>
+                            <a href="https://github.com/stevenremenapp/scorekeeper" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="non-library-projects">
+                <div class="project-grid-container">
+                    <div class="project-image">
+                        <img src="images/projectImages/memoryGame.png" alt="Image of cat memory game app">
+                    </div>
+                    <div class="project-title">
+                        <h3>Cat Detective Memory Game</h3>
+                    </div>
+                    <div class="project-desc">
+                        <div>
+                            <p>Project two of the Udacity Front-End Nanodegree asked that I use vanilla JavaScript to create a memory game, and so of course it had to include cat gifs. In addition to the cats, it offers CSS transitions, scorekeeping, game reset, choice of game size, and keyboard accessibility.</p>
+                            <br>
+                            <p>Completing this project taught me about using variables and objects to handle and track data, writing efficient event delegation, DOM manipulation, and the importance of refactoring spaghetti code.</p>
+                        </div>
+                        <div class="icons">
+                            <a href="https://stevenremenapp.github.io/memorygame/" target="_blank" rel="noopener noreferrer"><i class="fas fa-link"></i></a>
+                            <a href="https://github.com/stevenremenapp/memorygame" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-grid-container">
+                    <div class="project-image">
+                        <img src="images/projectImages/weather.png" alt="Image of the weather app showing weather information for Detroit, MI">
+                    </div>
+                    <div class="project-title">
+                        <h3>Weather Now!</h3>
+                    </div>
+                    <div class="project-desc">
+                        <div>
+                            <p>Yet another weather app, but this time built in homage to Serenity Now from Seinfeld. This app retrieves and displays data using the OpenWeatherMap API. It starts with your geolocation data, but you can search for any other city. The color of the gradient background will change depending on the weather, and its shade will be darker when the sun is down. The local date/time and sunrise/sunset times for the location are also accurately displayed using the Google Time Zone API.</p>
+                            <br>
+                            <p>My main takeaway from this project was to thoroughly understand <a href="https://infiniteundo.com/post/25326999628/falsehoods-programmers-believe-about-time" target="_blank" rel="noopener noreferrer">just how difficult</a> <a href="https://infiniteundo.com/post/25509354022/more-falsehoods-programmers-believe-about-time" target="_blank" rel="noopener noreferrer">using time when programming</a> can be.</p>
+                        </div>
+                        <div class="icons">
+                            <a href="https://stevenremenapp.github.io/weather/" target="_blank" rel="noopener noreferrer"><i class="fas fa-link"></i></a>
+                            <a href="https://github.com/stevenremenapp/weather" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+</html>
