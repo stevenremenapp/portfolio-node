@@ -1,0 +1,25 @@
+{
+  "name": "portfolio-node",
+  "version": "1.0.0",
+  "description": "Steve's portfolio built with node and npm",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "node-sass -w scss -o public/css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stevenremenapp/portfolio-node.git"
+  },
+  "author": "Steven Remenapp",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/stevenremenapp/portfolio-node/issues"
+  },
+  "homepage": "https://github.com/stevenremenapp/portfolio-node#readme",
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "node-sass": "^4.11.0"
+  }
+}

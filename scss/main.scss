@@ -1,0 +1,24 @@
+$purp: rebeccapurple;
+
+body {
+    background: pink;
+    font-family: 'Montserrat', sans-serif;
+}
+
+ul {
+    background: yellow;
+    li {
+        background: #000;
+        color: #fff;
+    }
+    ul {
+        li {
+            background: $purp;
+        }
+    }
+}
+
+img {
+    width: 600px;
+    height: auto;
+}
