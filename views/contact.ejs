@@ -86,6 +86,25 @@
                     </a>
                 </div>
             </div>
+            <form method="POST" action="/send">
+                <h3>Email Me</h3>
+                <% include partials/msg %>
+                <p>
+                    <label>Name</label>
+                    <input type="text" name="name">
+                </p>
+                <p>
+                    <label>Email</label>
+                    <input type="email" name="email">
+                </p>
+                <p class="full">
+                    <label>Message</label>
+                    <textarea name="message" rows="5"></textarea>
+                </p>
+                <p class="full">
+                    <button type="submit">Submit</button>
+                </p>
+            </form>
         </div>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
         <script src="scripts/main.js"></script>

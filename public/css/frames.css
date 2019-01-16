@@ -160,6 +160,10 @@
   left: 340px;
   width: calc(50vw - 699px); }
 
+@media screen and (max-width: 1510px) {
+  .frame-16 {
+    display: none; } }
+
 @media screen and (max-width: 1430px) {
   .frame-15 {
     display: none; } }
