@@ -87,23 +87,21 @@
                 </div>
             </div>
             <form method="POST" action="/send">
-                <h3>Email Me</h3>
-                <% include partials/msg %>
-                <p>
-                    <label>Name</label>
-                    <input type="text" name="name">
-                </p>
-                <p>
-                    <label>Email</label>
-                    <input type="email" name="email">
-                </p>
-                <p class="full">
-                    <label>Message</label>
-                    <textarea name="message" rows="5"></textarea>
-                </p>
-                <p class="full">
-                    <button type="submit">Submit</button>
-                </p>
+                <div>
+                   <input type="text" name="name" placeholder="Enter your name" required>
+                  <label for="name">Name</label>
+                </div>
+                <div>
+                    <input type="email" name="email" placeholder="Enter your email address" required>
+                  <label for="email">Email</label>
+                </div>
+                <div>
+                    <textarea name="message" rows="5" placeholder="Tell me something good..." required></textarea>
+                    <label for="message">Message</label>
+                </div>
+                <div class="submit-container">
+                    <button type="submit">Send!</button>
+                </div>
             </form>
         </div>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
