@@ -805,9 +805,10 @@
     }
   }
   
-  // --- CONTACT PAGE --- //
+  // --- CONTACT &CONTACT SENT PAGE --- //
 
-  form {
+  form,
+  .message-box {
     max-width: 500px;
     padding: 50px;
     margin: 40px auto 70px auto;
@@ -871,6 +872,29 @@
         animation: chaos 0.2s infinite;
       }
     }
+    img {
+      border: 5px solid;
+      border-image: linear-gradient(to right, #acb6e5, #86fde8);
+      border-image-slice: 1;
+      max-width: 175px;
+    }
+    p {
+      margin-bottom: 0;
+      line-height: 1.5;
+      .animated-link-contact-error {
+        color: #000;
+          text-decoration: none;
+          box-shadow: 0px -3px 0px 0px #f9d423 inset;
+          transition: box-shadow 0.2s ease-in-out;
+          padding: 3px;
+          &:hover {
+            box-shadow: 0px -26px 0px 0px #f9d423 inset;
+          }
+          &:active {
+            box-shadow: 0px -26px 0px 0px #e65c00 inset;
+          }
+        }
+      }
   }
 
   @keyframes chaos {
@@ -941,6 +965,10 @@
         font-size: 60px;
         letter-spacing: -8.5px;
       }
+    }
+    .cntr {
+      padding-left: 20px;
+      padding-right: 20px;
     }
     .project-grid-container {
       display: grid;
@@ -1047,6 +1075,10 @@
       grid-column: 2 / 10;
       grid-row: 4 / 11;
     }
+  form,
+  .message-box {
+    padding: 50px 10px;
+    }
   }
   
   @media screen and (max-width: 515px) {
@@ -1090,9 +1122,23 @@
       grid-column: 1 / 11;
       grid-row: 8 / 18;
     }
+  form,
+  .message-box {
+    padding-top: 30px;
+    label {
+      left: 20px;
+    }
+    button {
+      width: 60%;
+    }
+  }
   }
   
   @media screen and (max-width: 415px) {
+    .cntr {
+      padding-left: 5px;
+      padding-right: 5px;
+    }
     .project-grid-container {
       grid-template-rows: repeat(17, 1fr);
       max-height: 1050px;
@@ -1112,5 +1158,9 @@
     .project-desc {
       grid-column: 1 / 11;
       grid-row: 6 / 18;
+    }
+    form,
+    .message-box {
+      margin-top: 30px;
     }
   }

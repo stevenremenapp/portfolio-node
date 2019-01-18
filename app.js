@@ -45,8 +45,8 @@ app.get('/contact', (req, res) => {
     res.render('contact');
 });
 
-app.post('/send', (req, res) => {
-    console.log(req.body);
+app.post('/contactsent', (req, res) => {
+    // console.log(req.body);
     const output = `
         <p>You have a new contact request!</p>
         <h3>Contact Details</h3>
@@ -68,9 +68,9 @@ app.post('/send', (req, res) => {
             refreshToken: process.env.REFRESH_TOKEN,
             accessToken: accessToken
         },
-        tls: {
-            rejectUnauthorized: false
-        }
+        // tls: {
+        //     rejectUnauthorized: false
+        // }
     });
 
     const mailOptions = {
@@ -82,9 +82,10 @@ app.post('/send', (req, res) => {
 
     transporter.sendMail(mailOptions, (error, info) => {
         if (error) {
-            return console.log(error);
+            console.log(error);
+            res.render('contacterror');
         }
-        res.render('success');
+        res.render('contactsent');
     });
 });
 
