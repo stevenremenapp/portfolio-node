@@ -22,25 +22,42 @@ let menuCloseBtn = document.querySelector('.menu-closed-icon');
 let menu = document.querySelector('.menu');
 let overlay = document.querySelector('.menu-overlay');
 
-menuBtn.addEventListener('click', function() {
+function openNav() {
     menuBtn.style.display = "none";
     menuCloseBtn.style.display = "block";
     menu.style.display = "flex";
     overlay.style.display = "block";
+}
+
+function closeNav() {
+    menuBtn.style.display = "block";
+    menuCloseBtn.style.display = "none";
+    menu.style.display = "none";
+    overlay.style.display = "none";
+}
+
+menuBtn.addEventListener('click', function() {
+    openNav();
+});
+
+menuBtn.addEventListener('keydown', function(event) {
+    if (event.keyCode === 13) {
+        openNav();
+    }
 });
 
 menuCloseBtn.addEventListener('click', function() {
-    menuBtn.style.display = "block";
-    menuCloseBtn.style.display = "none";
-    menu.style.display = "none";
-    overlay.style.display = "none";
+    closeNav();
+});
+
+menuCloseBtn.addEventListener('keydown', function(event) {
+    if (event.keyCode === 13) {
+        closeNav();
+    }
 });
 
 overlay.addEventListener('click', function() {
-    menuBtn.style.display = "block";
-    menuCloseBtn.style.display = "none";
-    menu.style.display = "none";
-    overlay.style.display = "none";
+    closeNav();
 });
 
 menuBtn.addEventListener('mouseover', function() {
