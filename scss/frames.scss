@@ -434,3 +434,38 @@
         border-width: 40px;
     }
 }
+
+// --- CONTACT FRAMES --- //
+
+.four04-frame-0 {
+    border: 20px solid;
+    border-image: linear-gradient(to left, #da22ff, #9733ee);
+    border-image-slice: 1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    opacity: 0.8;
+    &:hover {
+        border-width: 40px;
+    }
+    &:hover + div {
+        opacity: 0;
+    }
+}
+
+.four04-frame-1 {
+    border: 20px solid;
+    border-image: linear-gradient(to left, #1fa2ff, #12d8fa, #a6ffcb);
+    border-image-slice: 1;
+    top: 20px;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    z-index: -1;
+    opacity: 0.8;
+    &:hover {
+        border-width: 40px;
+    }
+}

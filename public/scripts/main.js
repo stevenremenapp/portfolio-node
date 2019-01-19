@@ -60,6 +60,8 @@ overlay.addEventListener('click', function() {
     closeNav();
 });
 
+// MENU BUTTON ANIMATIONS
+
 menuBtn.addEventListener('mouseover', function() {
     TweenMax.to("#menu-top", 0.75, {attr:{width:18}, repeat:-1, yoyo:true});
     TweenMax.to("#menu-middle", 0.75, {attr:{width:12}, repeat:-1, yoyo:true});

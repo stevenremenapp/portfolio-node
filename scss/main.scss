@@ -401,6 +401,17 @@
   .home.active.contact-widget {
     background: linear-gradient(to right, #acb6e5, #86fde8);
   }
+
+  .home.four04-widget,
+  .email.four04-widget,
+  .github.four04-widget,
+  .linkedin.four04-widget {
+    background: linear-gradient(to left, #da22ff, #9733ee);
+  }
+  
+  .home.active.four04-widget {
+    background: linear-gradient(to left, #1fa2ff, #12d8fa, #a6ffcb);
+  }
   
   .tooltip {
     position: relative;
@@ -641,6 +652,31 @@
         opacity: 0.8;
       }
     }
+    .four04-header {
+      font-family: 'DDCHardware', sans-serif;
+      font-size: 90px;
+      display: inline-block;
+      margin: 30px auto 0 auto;
+      letter-spacing: -13px;
+      line-height: 0.8;
+      animation: nameGrow 3s;
+      span {
+        display: inline-block;
+      }
+      &:after {
+        content: '';
+        display: block;
+        position: relative;
+        width: 102%;
+        border-bottom: 20px solid;
+        border-image: linear-gradient(to left, #da22ff, #9733ee);
+        border-image-slice: 1;
+        z-index: -2;
+        margin-top: -17px;
+        margin-left: 3px;
+        opacity: 0.8;
+      }
+    }
     h2 {
       font-family: 'Montserrat', sans-serif;
     }
@@ -780,6 +816,7 @@
     .icons {
       align-self: flex-end;
       margin-right: -25px;
+      margin-top: 10px;
       width: 90px;
       height: 40px;
       a {
@@ -803,7 +840,7 @@
     }
   }
   
-  // --- CONTACT &CONTACT SENT PAGE --- //
+  // --- CONTACT & CONTACT SENT PAGE --- //
 
   form,
   .message-box {
@@ -913,6 +950,27 @@
     }
   }
 
+  // --- 404 PAGE --- //
+
+  .cntr {
+    .cat-picture {
+      width: 95%;
+      height: auto;
+      max-width: 600px;
+      max-height: 450px;
+      margin-top: 30px;
+      border: 5px solid;
+      border-image: linear-gradient(to left, #da22ff, #9733ee);
+      border-image-slice: 1;
+    }
+    .four04-text {
+      max-width: 600px;
+      margin: 30px auto;
+      font-family: 'Montserrat', sans-serif;
+      line-height: 1.5;
+    }
+  }
+
 
 
   // --- MEDIA QUERIES --- //
@@ -936,6 +994,9 @@
     .projects-display-option {
       margin: 50px;
     }
+    .project-grid-container {
+      margin: 0 auto;
+    }
     .project-image {
       grid-column: 1 / 8;
       grid-row: 1 / 6;
@@ -953,7 +1014,7 @@
     }
     .project-desc {
       grid-column: 2 / 10;
-      grid-row: 4 / 9;
+      grid-row: 4 / 8;
     }
   }
   
@@ -965,18 +1026,11 @@
       }
     }
     .cntr {
-      padding-left: 20px;
-      padding-right: 20px;
+      padding-left: 5px;
+      padding-right: 5px;
     }
     .project-grid-container {
-      display: grid;
-      grid-template-columns: repeat(10, 1fr);
-      grid-template-rows: repeat(8, 1fr);
-      max-width: 1000px;
-      max-height: 700px;
       margin: 0 auto 75px auto;
-      padding: 20px;
-      font-family: 'Montserrat', sans-serif;
       // ALLOWS THE BOX SHADOW TO BE UNDER THE IMAGE RATHER THAN ON/ABOVE IT
       &:after {
         content: '';
@@ -1019,7 +1073,8 @@
     }
     .cntr {
       .project-header,
-      .contact-header {
+      .contact-header,
+      .four04-header {
         font-size: 75px;
         letter-spacing: -11px;
       }
@@ -1029,7 +1084,7 @@
     }
     .project-image {
       grid-column: 1 / 10;
-      grid-row: 1 / 7;
+      grid-row: 1 / 6;
     }
     .project-desc {
       grid-column: 2 / 9;
@@ -1056,7 +1111,8 @@
     }
     .cntr {
       .project-header,
-      .contact-header {
+      .contact-header,
+      .four04-header {
         font-size: 65px;
         letter-spacing: -10px;
       }
@@ -1067,7 +1123,7 @@
     }
     .project-image {
       grid-column: 1 / 11;
-      grid-row: 1 / 7;
+      // grid-row: 1 / 6;
     }
     .project-desc {
       grid-column: 2 / 10;
@@ -1083,7 +1139,8 @@
     .cntr {
       text-align: left;
       .project-header,
-      .contact-header {
+      .contact-header,
+      .four04-header {
         text-align: left;
         font-size: 40px;
         margin: 5px auto 0 auto;
@@ -1115,6 +1172,10 @@
       h3 {
         font-size: 16px;
       }
+    }
+    .project-image {
+      // grid-column: 1 / 11;
+      grid-row: 1 / 7;
     }
     .project-desc {
       grid-column: 1 / 11;

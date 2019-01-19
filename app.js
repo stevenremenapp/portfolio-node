@@ -45,6 +45,10 @@ app.get('/contact', (req, res) => {
     res.render('contact');
 });
 
+app.get('*', (req, res) => {
+    res.render('404');
+});
+
 app.post('/contactsent', (req, res) => {
     // console.log(req.body);
     const output = `
@@ -84,6 +88,7 @@ app.post('/contactsent', (req, res) => {
         if (error) {
             console.log(error);
             res.render('contacterror');
+            return;
         }
         res.render('contactsent');
     });
