@@ -1,10 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Thanks! | Steven Remenapp</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="I'm a public librarian dy day and learning web development by night. Come say hi and check out what I'm working on.">
+    <meta name="author" content="Steven Remenapp">
+    <meta name ="keywords" content="Steven Remenapp,librarian,libraries,web development,web developer,software development">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
@@ -48,13 +51,13 @@
                 <rect x="17.5" y="17.5" width="5" height="5" transform="rotate(315 20 20)" fill="#000" />
             </svg>
         </div>
-        <div class="menu">
+        <nav class="menu">
             <a href="/" class='animated-link'>Home</a>
             <a href="projects" class='animated-link'>Projects</a>
             <a href="contact" class='animated-link'>Contact</a>
             <!-- <p>Credits</p> -->
             <!-- <p>Cluedo</p> -->
-        </div>
+        </nav>
         <div class="menu-overlay"></div>
         <div class="contact-widget">
             <div class="home contact-widget">
@@ -93,5 +96,14 @@
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
     <script src="scripts/main.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-132851708-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-132851708-1');
+    </script>
 </body>
 </html>

@@ -1,15 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Welcome! | Steven Remenapp</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="I'm a public librarian dy day and learning web development by night. Come say hi and check out what I'm working on.">
+    <meta name="author" content="Steven Remenapp">
+    <meta name ="keywords" content="Steven Remenapp,librarian,libraries,web development,web developer,software development">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" type="text/css" media="screen" href="css/frames.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/frames.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.min.css" />
     <!-- FAVICON -->
     <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
@@ -78,13 +81,13 @@
                         <rect x="17.5" y="17.5" width="5" height="5" transform="rotate(315 20 20)" fill="#000" />
                     </svg>
                 </div>
-                <div class="menu">
+                <nav class="menu">
                     <a href="/" class='animated-link'>Home</a>
                     <a href="projects" class='animated-link'>Projects</a>
                     <a href="contact" class='animated-link'>Contact</a>
                     <!-- <p>Credits</p> -->
                     <!-- <p>Cluedo</p> -->
-                </div>
+                </nav>
                 <div class="contact-widget">
                     <div class="home">
                         <i class="fas fa-bullhorn"></i>
@@ -150,5 +153,14 @@
     </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
     <script src="scripts/main.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-132851708-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-132851708-1');
+    </script>
 </body>
 </html>
