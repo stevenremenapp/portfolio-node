@@ -5,7 +5,7 @@ const { google } = require('googleapis');
 const dotenv = require('dotenv').config();
 
 const app = express();
-const OAuth2 = google.auth.OAuth2;
+// const OAuth2 = google.auth.OAuth2;
 
 // Views setup
 app.set('view engine', 'ejs');
@@ -16,22 +16,22 @@ app.use(bodyParser.urlencoded({ extended: false } ));
 app.use(bodyParser.json());
 
 // OAuth2 setup
-const oauth2Client = new OAuth2(
-    process.env.CLIENT_ID,
-    process.env.CLIENT_SECRET,
-    "https://developers.google.com/oauthplayground/"
-);
+// const oauth2Client = new OAuth2(
+//     process.env.CLIENT_ID,
+//     process.env.CLIENT_SECRET,
+//     "https://developers.google.com/oauthplayground/"
+// );
 
-oauth2Client.setCredentials({
-    refresh_token: process.env.REFRESH_TOKEN
-});
+// oauth2Client.setCredentials({
+//     refresh_token: process.env.REFRESH_TOKEN
+// });
 
-let accessToken = '';
+// let accessToken = '';
 
-async function getTokens() {
-    const tokens = await oauth2Client.refreshAccessToken();
-    let accessToken = tokens.credentials.access_token;
-}
+// async function getTokens() {
+//     const tokens = await oauth2Client.refreshAccessToken();
+//     let accessToken = tokens.credentials.access_token;
+// }
 
 app.get('/', (req, res) => {
     res.render('index');
@@ -63,16 +63,22 @@ app.post('/contactsent', (req, res) => {
     `;
 
     let transporter = nodemailer.createTransport({
+        // host: 'smtp.gmail.com',
+        // port: '465',
         service: "gmail",
+        // secure: true,
         auth: {
-            type: "OAuth2",
-            user: "stevenremen.app@gmail.com",
-            clientId: process.env.CLIENT_ID,
-            clientSecret: process.env.CLIENT_SECRET,
-            refreshToken: process.env.REFRESH_TOKEN,
-            accessToken: accessToken
+            // type: "OAuth2",
+            // user: "stevenremen.app@gmail.com",
+            // clientId: '110101864479-jk4f17o8ov47gp1b3cf1s4nfcmp6o64v.apps.googleusercontent.com',
+            // clientSecret: 'D-hvDPt4dJLEqcPsu8tg6qZH',
+            // refreshToken: '1/qsQAbOKOGjjHYjLxzA-d0Sn601ooDI0KryW9bNzqqaI',
+            // accessToken: accessToken
+            user: 'stevenremen.app@gmail.com',
+            pass: process.env.GMAIL_APP_SPECIFIC_PASSWORD
         },
         // tls: {
+        //     ciphers: 'SSLv3',
         //     rejectUnauthorized: false
         // }
     });
@@ -80,13 +86,13 @@ app.post('/contactsent', (req, res) => {
     const mailOptions = {
         from: '"Portfolio Contact" <stevenremen.app@gmail.com>',
         to: 'remenapp@gmail.com',
-        subject: 'Portfolio Contact Request',
+        subject: `Portfolio Contact Request from ${req.body.name}`,
         html: output
     };
 
     transporter.sendMail(mailOptions, (error, info) => {
         if (error) {
-            console.log(error);
+            // res.render('contacterror', {errorMessage: error});
             res.render('contacterror');
             return;
         }
