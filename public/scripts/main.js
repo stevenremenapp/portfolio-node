@@ -25,15 +25,17 @@ let overlay = document.querySelector('.menu-overlay');
 function openNav() {
     menuBtn.style.display = "none";
     menuCloseBtn.style.display = "block";
-    menu.style.display = "flex";
     overlay.style.display = "block";
+    menu.classList.add('open');
+    menu.classList.remove('close');
 }
 
 function closeNav() {
     menuBtn.style.display = "block";
     menuCloseBtn.style.display = "none";
-    menu.style.display = "none";
     overlay.style.display = "none";
+    menu.classList.add('close');
+    menu.classList.remove('open');
 }
 
 menuBtn.addEventListener('click', function() {

@@ -256,32 +256,111 @@ body {
   left: 0;
   right: 0;
   background: rgba(0, 0, 0, 0.6);
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
 }
 
 .menu {
-  display: none;
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  overflow: hidden;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  position: fixed;
-  width: 200px;
-  height: 300px;
-  top: 60px;
-  right: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  top: 58px;
+  right: 62px;
   background: #fff;
   border: 2px solid #000;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding: 5px 20px;
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
   font-size: 18px;
   text-transform: uppercase;
   z-index: 10;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.menu.open {
+  padding: 5px 20px;
+  -webkit-animation: open 0.2s ease-in-out forwards;
+          animation: open 0.2s ease-in-out forwards;
+}
+
+.menu.close {
+  -webkit-animation: close 0.2s ease-in-out forwards;
+          animation: close 0.2s ease-in-out forwards;
+}
+
+@-webkit-keyframes open {
+  0% {
+    width: 0;
+    height: 0;
+  }
+  70% {
+    width: 225px;
+    height: 325px;
+  }
+  100% {
+    width: 200px;
+    height: 300px;
+  }
+}
+
+@keyframes open {
+  0% {
+    width: 0;
+    height: 0;
+  }
+  70% {
+    width: 225px;
+    height: 325px;
+  }
+  100% {
+    width: 200px;
+    height: 300px;
+  }
+}
+
+@-webkit-keyframes close {
+  0% {
+    width: 200px;
+    height: 300px;
+  }
+  30% {
+    width: 225px;
+    height: 325px;
+  }
+  100% {
+    width: 0;
+    height: 0;
+  }
+}
+
+@keyframes close {
+  0% {
+    width: 200px;
+    height: 300px;
+  }
+  30% {
+    width: 225px;
+    height: 325px;
+  }
+  100% {
+    width: 0;
+    height: 0;
+  }
 }
 
 .contact-widget {
