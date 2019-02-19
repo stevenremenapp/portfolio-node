@@ -226,8 +226,9 @@
   .menu {
     width: 1px;
     height: 1px;
-    position: absolute;
+    position: fixed;
     overflow: hidden;
+    z-index: -2;
     align-items: center;
     justify-content: space-around;
     display: flex;
@@ -241,12 +242,12 @@
     font-weight: 600;
     font-size: 18px;
     text-transform: uppercase;
-    z-index: 10;
     transition: all 0.2s;
   }
 
   .menu.open {
     padding: 5px 20px;
+    z-index: 10;
     animation: open 0.2s ease-in-out forwards;
   }
   
