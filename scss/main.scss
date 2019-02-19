@@ -70,10 +70,15 @@
       z-index: 2;
       letter-spacing: -13px;
       line-height: 0.8;
+      // width: 200px;
+      // height: auto;
       animation: nameGrow 3s;
       span {
         display: inline-block;
       }
+      // &:hover {
+      //   width: 300px;
+      // }
     }
     *:hover {
       border-width: 40px;
